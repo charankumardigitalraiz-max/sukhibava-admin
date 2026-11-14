@@ -10,6 +10,7 @@ import {
   HelpCircle,
   Sparkles,
   ChevronsUpDown,
+  GitFork
 } from 'lucide-react'
 import { Avatar } from '../common/Avatar'
 
@@ -28,7 +29,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const mainNavigation = [
     { id: 'dashboard', label: 'Network Matrix', icon: LayoutDashboard },
-    // { id: 'genealogy', label: 'Genealogy Tree', icon: GitFork },
+    { id: 'genealogy', label: 'Genealogy Tree', icon: GitFork },
     { id: 'members', label: 'Downline Team', icon: Users, badge: '18k' },
     { id: 'commissions', label: 'Commission Logs', icon: Coins },
     { id: 'matching', label: 'Binary Balance', icon: Scale },

@@ -107,4 +107,11 @@ export interface TreeNode {
   rightCount: number
   leftChild?: TreeNode
   rightChild?: TreeNode
+  sponsorId?: string
+  sponsorName?: string
+  placementLeg?: 'Left' | 'Right'
+  personalPV?: number
+  joinDate?: string
+  status?: 'Active' | 'Grace Period' | 'Inactive'
+  level?: number
 }
