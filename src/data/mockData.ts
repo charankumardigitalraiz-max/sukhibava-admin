@@ -1,0 +1,247 @@
+import type {
+  MetricItem,
+  ChartDataPoint,
+  IncomeStreamPoint,
+  CommissionBarData,
+  HourlyTrafficData,
+  PerformanceRingData,
+  NetworkMember,
+  CommissionRecord,
+  PayoutTransaction,
+  TreeNode,
+} from '../types/dashboard'
+
+export const summaryMetrics: MetricItem[] = [
+  {
+    id: 'network',
+    title: 'Total Network',
+    value: '18,492',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'primary',
+    sparkline: [310, 340, 390, 420, 480, 530, 610],
+  },
+  {
+    id: 'directs',
+    title: 'Direct Referrals',
+    value: '142',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'emerald',
+    sparkline: [18, 20, 22, 21, 25, 27, 31],
+  },
+  {
+    id: 'bv_volume',
+    title: 'Team BV Volume',
+    value: '42.8L',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'sky',
+    sparkline: [820, 890, 940, 990, 1050, 1140, 1280],
+  },
+  {
+    id: 'earnings',
+    title: 'Wallet Earnings',
+    value: '₹9.65L',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'amber',
+    sparkline: [42, 48, 55, 62, 68, 79, 92],
+  },
+]
+
+export const memberTeamMetrics: MetricItem[] = [
+  {
+    id: 'total_team',
+    title: 'Total Downline',
+    value: '18,492',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'primary',
+    sparkline: [310, 340, 390, 420, 480, 530, 610],
+  },
+  {
+    id: 'active_partners',
+    title: 'Active Qualifiers',
+    value: '16,140',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'emerald',
+    sparkline: [280, 310, 340, 370, 410, 450, 490],
+  },
+  {
+    id: 'left_leg',
+    title: 'Left Leg Team',
+    value: '9,640',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'sky',
+    sparkline: [140, 155, 175, 190, 210, 230, 248],
+  },
+  {
+    id: 'right_leg',
+    title: 'Right Leg Team',
+    value: '8,852',
+    change: '',
+    isPositive: true,
+    period: '',
+    accentColor: 'amber',
+    sparkline: [120, 135, 150, 170, 185, 200, 215],
+  },
+]
+
+export const weeklyTrends: ChartDataPoint[] = [
+  { label: 'Mon', value: 340, secondaryValue: 260 },
+  { label: 'Tue', value: 420, secondaryValue: 310 },
+  { label: 'Wed', value: 510, secondaryValue: 390 },
+  { label: 'Thu', value: 480, secondaryValue: 360 },
+  { label: 'Fri', value: 620, secondaryValue: 460 },
+  { label: 'Sat', value: 780, secondaryValue: 540 },
+  { label: 'Sun', value: 410, secondaryValue: 320 },
+]
+
+export const monthlyTrends: ChartDataPoint[] = [
+  { label: 'Week 1', value: 1840, secondaryValue: 1420 },
+  { label: 'Week 2', value: 2310, secondaryValue: 1780 },
+  { label: 'Week 3', value: 2790, secondaryValue: 2050 },
+  { label: 'Week 4', value: 3150, secondaryValue: 2340 },
+]
+
+export const incomeStreams: IncomeStreamPoint[] = [
+  { day: 'Mon', binary: 64, direct: 42, leadership: 28, royalty: 16 },
+  { day: 'Tue', binary: 88, direct: 56, leadership: 36, royalty: 22 },
+  { day: 'Wed', binary: 104, direct: 68, leadership: 44, royalty: 28 },
+  { day: 'Thu', binary: 92, direct: 60, leadership: 40, royalty: 25 },
+  { day: 'Fri', binary: 126, direct: 82, leadership: 56, royalty: 34 },
+  { day: 'Sat', binary: 158, direct: 98, leadership: 72, royalty: 42 },
+  { day: 'Sun', binary: 78, direct: 50, leadership: 32, royalty: 18 },
+]
+
+export const commissionBarTrends: CommissionBarData[] = [
+  { label: 'Mon', directBonus: 45, binaryMatching: 65, levelIncome: 30, total: 140 },
+  { label: 'Tue', directBonus: 58, binaryMatching: 82, levelIncome: 38, total: 178 },
+  { label: 'Wed', directBonus: 72, binaryMatching: 105, levelIncome: 48, total: 225 },
+  { label: 'Thu', directBonus: 64, binaryMatching: 92, levelIncome: 42, total: 198 },
+  { label: 'Fri', directBonus: 88, binaryMatching: 124, levelIncome: 56, total: 268 },
+  { label: 'Sat', directBonus: 110, binaryMatching: 156, levelIncome: 70, total: 336 },
+  { label: 'Sun', directBonus: 52, binaryMatching: 74, levelIncome: 34, total: 160 },
+]
+
+export const hourlyTraffic: HourlyTrafficData[] = [
+  { hour: '08:00', count: 24, capacity: 50 },
+  { hour: '10:00', count: 68, capacity: 80 },
+  { hour: '12:00', count: 54, capacity: 80 },
+  { hour: '14:00', count: 42, capacity: 70 },
+  { hour: '16:00', count: 76, capacity: 90 },
+  { hour: '18:00', count: 88, capacity: 100 },
+  { hour: '20:00', count: 35, capacity: 60 },
+]
+
+export const performanceRings: PerformanceRingData[] = [
+  { id: 'left_leg', label: 'Left Leg BV', score: 92, color: '#6366f1', benchmark: 'Target 20L BV' },
+  { id: 'right_leg', label: 'Right Leg BV', score: 86, color: '#0ea5e9', benchmark: 'Target 20L BV' },
+  { id: 'retention', label: 'Active Line Ratio', score: 94, color: '#10b981', benchmark: 'Target 90%' },
+  { id: 'diamond_qual', label: 'Diamond Target', score: 88, color: '#f59e0b', benchmark: 'Tier Progress' },
+]
+
+export const networkMembersList: NetworkMember[] = [
+  { id: 'SKB-1001', name: 'Aarav Sharma', sponsorId: 'SKB-ROOT', sponsorName: 'Sanjay Rao', joinDate: '12 Jan 2026', placementLeg: 'Left', rank: 'Diamond', personalBV: 1500, teamBV: 84000, status: 'Active' },
+  { id: 'SKB-1002', name: 'Meera Nambiar', sponsorId: 'SKB-ROOT', sponsorName: 'Sanjay Rao', joinDate: '18 Jan 2026', placementLeg: 'Right', rank: 'Platinum', personalBV: 1200, teamBV: 62000, status: 'Active' },
+  { id: 'SKB-1003', name: 'Rohan Gupta', sponsorId: 'SKB-1001', sponsorName: 'Aarav Sharma', joinDate: '02 Feb 2026', placementLeg: 'Left', rank: 'Gold', personalBV: 800, teamBV: 38000, status: 'Active' },
+  { id: 'SKB-1004', name: 'Kavita Pillai', sponsorId: 'SKB-1001', sponsorName: 'Aarav Sharma', joinDate: '14 Feb 2026', placementLeg: 'Right', rank: 'Gold', personalBV: 1000, teamBV: 41000, status: 'Active' },
+  { id: 'SKB-1005', name: 'Devendra Joshi', sponsorId: 'SKB-1002', sponsorName: 'Meera Nambiar', joinDate: '01 Mar 2026', placementLeg: 'Left', rank: 'Silver', personalBV: 500, teamBV: 22000, status: 'Grace Period' },
+  { id: 'SKB-1006', name: 'Sunita Menon', sponsorId: 'SKB-1002', sponsorName: 'Meera Nambiar', joinDate: '15 Mar 2026', placementLeg: 'Right', rank: 'Silver', personalBV: 600, teamBV: 19500, status: 'Active' },
+  { id: 'SKB-1007', name: 'Vikram Seth', sponsorId: 'SKB-1003', sponsorName: 'Rohan Gupta', joinDate: '04 Apr 2026', placementLeg: 'Left', rank: 'Distributor', personalBV: 300, teamBV: 8400, status: 'Active' },
+  { id: 'SKB-1008', name: 'Anil Deshmukh', sponsorId: 'SKB-1004', sponsorName: 'Kavita Pillai', joinDate: '20 Apr 2026', placementLeg: 'Right', rank: 'Distributor', personalBV: 250, teamBV: 6200, status: 'Inactive' },
+  { id: 'SKB-1009', name: 'Deepa Iyer', sponsorId: 'SKB-1003', sponsorName: 'Rohan Gupta', joinDate: '02 May 2026', placementLeg: 'Right', rank: 'Silver', personalBV: 500, teamBV: 14800, status: 'Active' },
+]
+
+export const commissionRecordsList: CommissionRecord[] = [
+  { id: 'COMM-8821', memberId: 'SKB-1001', memberName: 'Aarav Sharma', type: 'Binary Pair Match', date: '14 Nov 2026', amount: '₹14,500', points: 1450, status: 'Credited' },
+  { id: 'COMM-8820', memberId: 'SKB-1002', memberName: 'Meera Nambiar', type: 'Direct Referral', date: '14 Nov 2026', amount: '₹4,800', points: 480, status: 'Credited' },
+  { id: 'COMM-8819', memberId: 'SKB-1003', memberName: 'Rohan Gupta', type: 'Leadership Pool', date: '14 Nov 2026', amount: '₹8,200', points: 820, status: 'Credited' },
+  { id: 'COMM-8818', memberId: 'SKB-1004', memberName: 'Kavita Pillai', type: 'Binary Pair Match', date: '13 Nov 2026', amount: '₹6,400', points: 640, status: 'Credited' },
+  { id: 'COMM-8817', memberId: 'SKB-1005', memberName: 'Devendra Joshi', type: 'Direct Referral', date: '13 Nov 2026', amount: '₹2,500', points: 250, status: 'Processing' },
+  { id: 'COMM-8816', memberId: 'SKB-1006', memberName: 'Sunita Menon', type: 'Rank Bonus', date: '12 Nov 2026', amount: '₹15,000', points: 1500, status: 'Credited' },
+  { id: 'COMM-8815', memberId: 'SKB-1007', memberName: 'Vikram Seth', type: 'Binary Pair Match', date: '11 Nov 2026', amount: '₹3,200', points: 320, status: 'Held' },
+]
+
+export const payoutTransactionsList: PayoutTransaction[] = [
+  { id: 'TX-9011', memberId: 'SKB-1001', memberName: 'Aarav Sharma', method: 'Bank Wire', date: '14 Nov 2026', grossAmount: '₹50,000', tdsDeduction: '₹2,500', netPayout: '₹47,500', status: 'Completed' },
+  { id: 'TX-9010', memberId: 'SKB-1002', memberName: 'Meera Nambiar', method: 'UPI / IMPS', date: '14 Nov 2026', grossAmount: '₹32,000', tdsDeduction: '₹1,600', netPayout: '₹30,400', status: 'Completed' },
+  { id: 'TX-9009', memberId: 'SKB-1003', memberName: 'Rohan Gupta', method: 'Bank Wire', date: '13 Nov 2026', grossAmount: '₹18,500', tdsDeduction: '₹925', netPayout: '₹17,575', status: 'Completed' },
+  { id: 'TX-9008', memberId: 'SKB-1004', memberName: 'Kavita Pillai', method: 'UPI / IMPS', date: '12 Nov 2026', grossAmount: '₹24,000', tdsDeduction: '₹1,200', netPayout: '₹22,800', status: 'Pending' },
+  { id: 'TX-9007', memberId: 'SKB-1005', memberName: 'Devendra Joshi', method: 'Bank Wire', date: '11 Nov 2026', grossAmount: '₹12,000', tdsDeduction: '₹600', netPayout: '₹11,400', status: 'Completed' },
+  { id: 'TX-9006', memberId: 'SKB-1006', memberName: 'Sunita Menon', method: 'UPI / IMPS', date: '10 Nov 2026', grossAmount: '₹15,000', tdsDeduction: '₹750', netPayout: '₹14,250', status: 'Completed' },
+]
+
+export const binaryGenealogyRoot: TreeNode = {
+  id: 'SKB-ROOT',
+  name: 'Dr. Sanjay Rao (You)',
+  rank: 'Crown Ambassador',
+  leftBV: 248000,
+  rightBV: 215000,
+  leftCount: 9640,
+  rightCount: 8852,
+  leftChild: {
+    id: 'SKB-1001',
+    name: 'Aarav Sharma',
+    rank: 'Diamond Leader',
+    leftBV: 132000,
+    rightBV: 116000,
+    leftCount: 5120,
+    rightCount: 4520,
+    leftChild: {
+      id: 'SKB-1003',
+      name: 'Rohan Gupta',
+      rank: 'Gold Executive',
+      leftBV: 68000,
+      rightBV: 54000,
+      leftCount: 2640,
+      rightCount: 2180,
+    },
+    rightChild: {
+      id: 'SKB-1004',
+      name: 'Kavita Pillai',
+      rank: 'Gold Executive',
+      leftBV: 58000,
+      rightBV: 58000,
+      leftCount: 2310,
+      rightCount: 2210,
+    },
+  },
+  rightChild: {
+    id: 'SKB-1002',
+    name: 'Meera Nambiar',
+    rank: 'Platinum Leader',
+    leftBV: 118000,
+    rightBV: 97000,
+    leftCount: 4890,
+    rightCount: 3962,
+    leftChild: {
+      id: 'SKB-1005',
+      name: 'Devendra Joshi',
+      rank: 'Silver Member',
+      leftBV: 51000,
+      rightBV: 46000,
+      leftCount: 1980,
+      rightCount: 1780,
+    },
+    rightChild: {
+      id: 'SKB-1006',
+      name: 'Sunita Menon',
+      rank: 'Silver Member',
+      leftBV: 48000,
+      rightBV: 49000,
+      leftCount: 1840,
+      rightCount: 1880,
+    },
+  },
+}
