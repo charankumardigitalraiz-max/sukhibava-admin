@@ -76,18 +76,16 @@ export const PayoutsPage: React.FC = () => {
         }
         return (
           <span
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-normal ${
-              colors[item.status]
-            }`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-normal ${colors[item.status]
+              }`}
           >
             <span
-              className={`h-1.5 w-1.5 rounded-full ${
-                item.status === 'Completed'
-                  ? 'bg-emerald-500'
-                  : item.status === 'Pending'
+              className={`h-1.5 w-1.5 rounded-full ${item.status === 'Completed'
+                ? 'bg-emerald-500'
+                : item.status === 'Pending'
                   ? 'bg-amber-500'
                   : 'bg-rose-500'
-              }`}
+                }`}
             />
             {item.status}
           </span>
@@ -108,7 +106,7 @@ export const PayoutsPage: React.FC = () => {
       title: 'Gross Disbursed',
       value: '₹12,45,000',
       subtitle: 'Requested payout volume',
-      change: '+16.8%',
+      change: '',
       isPositive: true,
       color: 'primary',
       icon: ArrowUpRight,
@@ -118,7 +116,7 @@ export const PayoutsPage: React.FC = () => {
       title: 'Net Settled',
       value: '₹11,82,750',
       subtitle: 'Bank accounts credited',
-      change: '+16.8%',
+      change: '',
       isPositive: true,
       color: 'emerald',
       icon: CheckCircle2,
@@ -128,7 +126,7 @@ export const PayoutsPage: React.FC = () => {
       title: 'Statutory TDS (5%)',
       value: '₹62,250',
       subtitle: 'Govt challan deposit',
-      change: 'Compliant',
+      change: '',
       isPositive: true,
       color: 'rose',
       icon: Landmark,
@@ -138,7 +136,7 @@ export const PayoutsPage: React.FC = () => {
       title: 'Pending Settlements',
       value: '₹74,500',
       subtitle: 'Queued for NEFT/IMPS',
-      change: 'In Queue',
+      change: '',
       isPositive: true,
       color: 'amber',
       icon: Clock,
@@ -157,7 +155,7 @@ export const PayoutsPage: React.FC = () => {
           </p>
         </div>
 
-        <Button size="sm" variant="secondary" icon={<Download size={14} />}>
+        <Button size="sm" variant="primary" icon={<Download size={14} />}>
           Export Settlement CSV
         </Button>
       </div>

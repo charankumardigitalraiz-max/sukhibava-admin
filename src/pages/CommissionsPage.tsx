@@ -78,18 +78,16 @@ export const CommissionsPage: React.FC = () => {
         }
         return (
           <span
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-normal ${
-              colors[item.status]
-            }`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-normal ${colors[item.status]
+              }`}
           >
             <span
-              className={`h-1.5 w-1.5 rounded-full ${
-                item.status === 'Credited'
-                  ? 'bg-emerald-500'
-                  : item.status === 'Processing'
+              className={`h-1.5 w-1.5 rounded-full ${item.status === 'Credited'
+                ? 'bg-emerald-500'
+                : item.status === 'Processing'
                   ? 'bg-amber-500'
                   : 'bg-slate-400'
-              }`}
+                }`}
             />
             {item.status}
           </span>
@@ -161,7 +159,7 @@ export const CommissionsPage: React.FC = () => {
           </p>
         </div>
 
-        <Button size="sm" variant="secondary" icon={<Download size={14} />}>
+        <Button size="sm" variant="primary" icon={<Download size={14} />}>
           Export Commission Sheet
         </Button>
       </div>

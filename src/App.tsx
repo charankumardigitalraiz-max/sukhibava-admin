@@ -7,6 +7,8 @@ import { CommissionsPage } from './pages/CommissionsPage'
 import { PayoutsPage } from './pages/PayoutsPage'
 import { RanksPage } from './pages/RanksPage'
 import { SettingsPage } from './pages/SettingsPage'
+import { HelpDocsPage } from './pages/HelpDocsPage'
+import { ProfilePage } from './pages/ProfilePage'
 import { Button } from './components/common/Button'
 import { UserPlus, X } from 'lucide-react'
 
@@ -17,7 +19,6 @@ export const App: React.FC = () => {
   const renderActivePage = () => {
     switch (activeTab) {
       case 'dashboard':
-      case 'matching':
         return <DashboardPage />
       case 'genealogy':
         return <GenealogyPage />
@@ -30,8 +31,11 @@ export const App: React.FC = () => {
       case 'ranks':
         return <RanksPage />
       case 'settings':
-      case 'help':
         return <SettingsPage />
+      case 'profile':
+        return <ProfilePage onBack={() => setActiveTab('dashboard')} />
+      case 'help':
+        return <HelpDocsPage />
       default:
         return <DashboardPage />
     }
